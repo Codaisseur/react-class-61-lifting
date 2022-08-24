@@ -1,18 +1,14 @@
 import { useState } from "react";
 
 const Player = (props) => {
-  const increaseScore = () => {
-    // setScore(score + 1);
-  };
-
-  console.log("RE_RENDER!!!", props.name);
+  console.log("RE_RENDER!!!", props.name, props);
 
   return (
     <div>
       <h2>
         Name: {props.name}. Score: {props.score}
       </h2>
-      <button onClick={() => props.addOne()}>+</button>
+      <button onClick={() => props.increase(props.id)}>+</button>
     </div>
   );
 };
